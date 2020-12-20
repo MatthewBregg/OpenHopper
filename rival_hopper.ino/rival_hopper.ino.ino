@@ -220,6 +220,9 @@ void die(int major, int minor) {
   digitalWrite(PWM, LOW);
   // TODO: BREGG: Considering adding a piezo and using that to bleep out the error codes instead?
   while (true) {
+    log("Major error, died, error code major then minor");
+    log(major);
+    log(minor);
     // Large off indicates resetting up error code.
     digitalWrite(LED_BUILTIN, LOW);
     delay(3000);
@@ -511,6 +514,12 @@ void log(unsigned long log) {
   Serial.println(log);
 #endif
 }
+void log(int log) {
+#ifdef DEBUG_SERIAL
+  Serial.println(log);
+#endif
+}
+
 
 
 void setup() {
@@ -577,18 +586,18 @@ void setup() {
   initSerial();
   log("Initializing Serial Logging");
 
+
 }
 
 void loop() {
-  while (true) {
-    set_spinner(true);
-    set_pusher(false);
-    delay(1000);
-    set_spinner(false);
-    set_pusher(true);
-    delay(1000);
-  }
+
   if (firstRun) {
+    if (readTrigger()) {
+     log("Trigger is down");
+    }
+    if (readLimit()) {
+      log("Limit is down");
+    }
     //Wait for SimonK boot and arm (TBD value, Selftest already waits 500ms)
     delay(500);
     //Do POST
