@@ -158,13 +158,13 @@ float get_motor_speed_factor(float volts) {
 
 }
 
-
+constexpr int motor_speed = 11;
 void set_pusher(bool on) {
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(13));
+  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
   if ( on ) {
-    // Set the pusher (CHIP A) to reverse (The pusher is connected to the bottom driver chip).
-    digitalWrite(A_INA1, LOW);
-    digitalWrite(A_INA2, HIGH);
+    // Set the pusher (CHIP A) to forward (The pusher is connected to the bottom driver chip).
+    digitalWrite(A_INA1, HIGH);
+    digitalWrite(A_INA2, LOW);
   } else {
     // Set the pusher (CHIP A) to brake (The pusher is connected to the bottom driver chip).
     digitalWrite(A_INA1, HIGH);
@@ -174,7 +174,7 @@ void set_pusher(bool on) {
 }
 
 void set_spinner(bool on) {
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(13));
+  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
   if ( on ) {
     // Set the spinner (CHIP B) to coast (The spinner is connected to the top driver chip).
     digitalWrite(B_INA1, HIGH);
@@ -582,7 +582,7 @@ void setup() {
   // http://ceezblog.info/2018/07/10/arduino-timer-pwm-cheat-sheet/
   TCCR2B = (TCCR2B & B11111000) | B00000001;
   // Set out PWM output.
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(13));
+  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
   initSerial();
   log("Initializing Serial Logging");
 
@@ -618,7 +618,7 @@ void loop() {
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
-      updateSpeedFixed(17000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
+      updateSpeedFixed(13000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
       delay(20); //Some anti-noise buffer
       gov_update_repeats--;
     }
