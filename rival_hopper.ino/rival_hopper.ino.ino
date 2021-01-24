@@ -1,7 +1,7 @@
 //// PINOUTS - S-Core 1.0/1.5
 // AVR pin - Arduino IDE pin - functionality
 // Pusher Driver Chips TB67H420FTG
-// Chip B: (The top one, farther form the AVR) (Connect to spinner).
+// Chip B: (The top one, farther from the AVR) (Connect to spinner).
 // --  - A3 - INA1
 // --  - A2 - INA2
 // --  - A4 - INB1
@@ -11,7 +11,7 @@
 // --  - A0 - INB2
 // --  - 13 - INB1
 // --  - 5  - INA1
-// --  - 8  - INa2
+// --  - 8  - INA2
 // PB3 - 11 - PWM A/B
 
 
@@ -158,13 +158,21 @@ float get_motor_speed_factor(float volts) {
 
 }
 
-constexpr int motor_speed = 11;
+constexpr int motor_speed = 8;
+// If the pusher should be ran in reverse.
+constexpr bool reverse_pusher = true;
 void set_pusher(bool on) {
   analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
   if ( on ) {
-    // Set the pusher (CHIP A) to forward (The pusher is connected to the bottom driver chip).
-    digitalWrite(A_INA1, HIGH);
-    digitalWrite(A_INA2, LOW);
+    if (reverse_pusher) {
+      // Set the pusher (CHIP A) to reverse (The pusher is connected to the bottom driver chip).
+      digitalWrite(A_INA1, LOW);
+      digitalWrite(A_INA2, HIGH);
+    } else {
+       // Set the pusher (CHIP A) to forward (The pusher is connected to the bottom driver chip).
+      digitalWrite(A_INA1, HIGH);
+      digitalWrite(A_INA2, LOW);
+    }
   } else {
     // Set the pusher (CHIP A) to brake (The pusher is connected to the bottom driver chip).
     digitalWrite(A_INA1, HIGH);
@@ -618,7 +626,7 @@ void loop() {
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
-      updateSpeedFixed(13000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
+      updateSpeedFixed(9000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
       delay(20); //Some anti-noise buffer
       gov_update_repeats--;
     }
@@ -705,11 +713,11 @@ void loop() {
         log("D0, and D1 respective times to first good tach.");
         log(finished_d0 - started_revving);
         log(finished_d1 - started_revving);
-        // TODO:Bregg Clean up firing code, at least add pusher stall protection.
+        
         set_pusher(true);
         // IF not loaded load a ball
         // Timeout on all operations in case of empty mag/jams.
-        unsigned long timeout = 700;
+        unsigned long timeout = 2000; // Pusher Stall Protection Timeout.
         unsigned long timout_counter = millis();
         bool timed_out = false;
         while (!readLimit() && !timed_out) {
