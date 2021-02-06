@@ -626,7 +626,7 @@ void loop() {
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
-      updateSpeedFixed(9000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
+      updateSpeedFixed(13000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
       delay(20); //Some anti-noise buffer
       gov_update_repeats--;
     }
