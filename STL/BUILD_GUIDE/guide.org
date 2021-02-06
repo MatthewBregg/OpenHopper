@@ -1,0 +1,25 @@
+* Printing Time
+I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
+
+Supports were avoided for the majority of the model, there's 1-2 places that do need supports, mainly 
+- Both of the spinners.
+  - Supports around the perimeter for these are very easy to remove, and not visible anyway, so extra residue can be ignored. See their section for more details.
+- The sling mount on the stock mount.
+  - This broke off very cleanly and easily with my pliers.
+
+I advise using ironing for pretty much all parts, although it's purely optional/cosmetic.
+
+For the most part, any reasonably strong infill/perim/solid combo will work, so feel free to diverge from the recommended if you so desire *EXCEPT* when I mention that a part needs to be extra solid/100% infill.
+
+** The Hopper
+*** File: Angled Hopper.stl
+#+CAPTION: The angled hopper plated in the correct orientation.
+[[./angled_hopper_plated.png]]
+
+No supports.
+Ironing.
+25% hex infill, 4 perims/5 solids.
+
+This is the main hopper that holds the balls. 
+Plate as shown. This isn't a particularly load bearing part, and even in my prototype prints with 10% cubic infill, and only 2 perimeters, it feels fairly solid.
+Nonetheless, no kill like overkill.
