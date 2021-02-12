@@ -1,3 +1,5 @@
+STATUS: In progress. I am currently printing parts, and writing this guide live as I go.
+
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
 
@@ -11,6 +13,8 @@ I advise using ironing for pretty much all parts, although it's purely optional/
 
 For the most part, any reasonably strong infill/perim/solid combo will work, so feel free to diverge from the recommended if you so desire *EXCEPT* when I mention that a part needs to be extra solid/100% infill.
 
+Assume .20mm layer height unless specified otherwise.
+
 ** The Hopper
 *** File: Angled Hopper.stl
 #+CAPTION: The angled hopper plated in the correct orientation.
@@ -23,3 +27,95 @@ Ironing.
 This is the main hopper that holds the balls. 
 Plate as shown. This isn't a particularly load bearing part, and even in my prototype prints with 10% cubic infill, and only 2 perimeters, it feels fairly solid.
 Nonetheless, no kill like overkill.
+
+*** File: Plain Lid No speed loader.stl/New Lid with space for feed gate.stl
+#+CAPTION: The lid plated in the correct orientation. Print one or the other.
+[[./hopper_lids.png]]
+
+No supports.
+Ironing.
+30% hex infill, 4 perims, *2* solids (might as well take advantage of that clear petg here!).
+I used variable layer height for the retainer on the speed gate variation, but this is optional.
+
+*** File: HopperToFlywheelTube.stl
+The meat of the blaster.
+
+This connects the hopper top, flywheel cage, stock, and grip assembly together.
+This also houses the ESCs, both spinner motor mounts, and has most of the wire raceways.
+
+*NOTE: Captive nuts, make sure to insert a print pause at the right point to catch em!*
+
+No ironing, no real point with this one, too many angled tops.
+
+20% gyroid infill, 4 perims/5 solids, for my own sanity in print times.
+
+No supports needed.
+
+#+CAPTION: Orientation
+[[./feedneck_1.png]]
+#+CAPTION: Don't forget the captive nuts, insert before zheight 6.60mm.
+[[./feedneck_2.png]]
+[[./feedneck_3.png]]
+
+*** File: Wings.stl
+TODO
+
+*** File: Spinner.stl
+TODO
+
+*** File: Spinner Motor Cover.stl
+
+This acts as cover for the spinner in the feed neck, which otherwise would have it's motor terminals and endbell exposed.  It also doubles as a wire raceway for said motor wires.
+
+100% rectilinear infill, 4 perims/5 solids.
+
+No ironing, no real point with this one, too many angled tops.
+
+No supports needed.
+
+#+CAPTION: Orientation.
+[[./spinner_motor_cover.png]]
+
+
+
+** Stock
+*** File: Stock Mounter.stl
+This connects the feed neck, hopper, main grip plate to the stock.
+
+We print this one at 100% infill due to this.
+
+100% rectilinear infill, 4 perims/5 solids.
+
+No ironing here.
+
+Supports are needed for the sling mount, see the support image. They are minor, and easily break off even with petg with some simple pliers.
+
+#+CAPTION: Orientation
+[[./stock_mounter.png]]
+
+#+CAPTION: With supports
+[[./stock_mounter_supports.png]]
+
+*** File: Outer stock.stl
+
+No supports, no ironing.
+
+20% honeycomb infill, 4 perims/4 solids.
+
+This is mostly cosmetic, but it does house the power switch.  
+
+#+CAPTION: Orientation
+[[./stock_outer.png]]
+
+*** File: stock_inner.stl
+
+No supports, no ironing.  4 perims/5 solids.
+
+This serves as the battery box, and connects the stock outer to the blaster.
+
+#+CAPTION: Orientation
+[[./stock_inner.png]]
+
+*** File: lid.stl
+TODO.
+
