@@ -119,3 +119,58 @@ This serves as the battery box, and connects the stock outer to the blaster.
 *** File: lid.stl
 TODO.
 
+
+** The FWC
+*** File: FWC.stl
+The flywheel cage, the big spinny wheel mount. 
+
+4 perims/5 solids, 100% rectilinear infill. 
+Yes to ironing.  No supports.
+
+100% infill to reduce noise and ensure there's no flex.  
+
+
+
+#+CAPTION: Captive nut.
+[[./fwc_nut_1.png]]
+#+CAPTION: Captive Nut, insert a pause @ Z6.60.
+[[./fwc_nut_2.png]]
+
+#+CAPTION: Orientation
+[[./fwc_orientation.png]]
+
+*** File: Flywheel.stl
+The big spinny thing.
+
+.1mm layer height.
+20% infill, honeycomb. 
+No supports/ironing.
+3 shells, 6 tops/6 bottoms, seam position random. 
+
+#+CAPTION: Orientation
+[[./flywheel.png]]
+
+Print out two of these!
+
+** Grip
+*** File: Grip Sides.stl and Grip Sides(Mirror).stl
+Side panels which go on the grip.
+Covers the trigger wiring compartment, and improves ergonomics.
+
+No supports, yes ironing.
+
+25% honeycomb infill, 4 perims/4 solids.
+
+#+CAPTION:Orientation
+[[./grips.png]]
+
+*** File: Trigger Grip Assembly
+
+The main handle.
+
+100% rectilinear infill, 4 perims/5 solids.
+
+No supports, no ironing.
+
+#+CAPTION:Orientation
+[[./grip.png]]

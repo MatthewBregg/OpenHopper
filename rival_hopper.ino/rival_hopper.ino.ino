@@ -158,7 +158,7 @@ float get_motor_speed_factor(float volts) {
 
 }
 
-constexpr int motor_speed = 8;
+constexpr float motor_speed = 10.5;
 // If the pusher should be ran in reverse.
 constexpr bool reverse_pusher = true;
 void set_pusher(bool on) {
@@ -588,6 +588,7 @@ void setup() {
   pinMode(voltimeter, INPUT);
   // Set the pusher motor PWM carriar frequency to be a high frequency
   // http://ceezblog.info/2018/07/10/arduino-timer-pwm-cheat-sheet/
+  // We do 32Khz with Timer 2 and a 1 prescaler, which is fine with the driver I am using.
   TCCR2B = (TCCR2B & B11111000) | B00000001;
   // Set out PWM output.
   analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
