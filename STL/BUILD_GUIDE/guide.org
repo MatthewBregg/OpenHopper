@@ -58,10 +58,31 @@ No supports needed.
 [[./feedneck_3.png]]
 
 *** File: Wings.stl
-TODO
+This serves as the hopper agitator.
+
+Supports on build plate only, due to the nature of it they are easy to remove, and final surface doesn't matter too much, this part goes inside the hopper.
+
+Ironing.
+25% hex infill, 4 perims/5 solids.
+
+#+CAPTION: Orientation
+[[./spinner_c.png]]
 
 *** File: Spinner.stl
-TODO
+
+This serves the pusher, and feeds balls in the feed neck into the flywheels.
+
+Supports on build plate only, due to the nature of it they are easy to remove, and final surface doesn't matter too much, as the support side isn't visible.
+No Ironing.
+25% hex infill, 4 perims/5 solids.
+
+You'll need to insert a nyloc nut while printing this, so make sure to add a pause at 18.2m to do so. 
+The dome side of the nyloc nut should be pointing down towards the build plate.
+
+#+CAPTION: Captive nut @ 18.2mm
+[[./spinner_a.png]]
+#+CAPTION: Orientation
+[[./spinner_b.png]]
 
 *** File: Spinner Motor Cover.stl
 
@@ -111,7 +132,14 @@ This is mostly cosmetic, but it does house the power switch.
 
 No supports, no ironing.  4 perims/5 solids.
 
+I used a height range modifier to set everything above 159mm to 100% infill, although this is optional. 
+
+#+CAPTION: Height range modifier
+[[./stock_inner_height_mod.png]]
+
 This serves as the battery box, and connects the stock outer to the blaster.
+
+Warning: Do not print over octoprint, slic3r generates lots of short lines/arcs, to the point where my printer started going at a snails pace and ruined the print. This might just be an issue for 8 bit printers, due to the speed of checksumming serial gcode commands.
 
 #+CAPTION: Orientation
 [[./stock_inner.png]]
