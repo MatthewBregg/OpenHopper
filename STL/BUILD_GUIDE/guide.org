@@ -180,6 +180,25 @@ No supports/ironing.
 
 Print out two of these!
 
+*** FWC Cover.stl
+
+This serves several purposes
+- Reinforce the connection between the FWC and main blaster.
+- Serve as a finger guard for the top of the flywheels.
+- Contains the hop up mount. 
+- Contains wire raceways and a compartment for the main blaster controller.
+- The blaster controller compartment lid doubles as the top rail.
+
+Despite this, printing it is fairly straight forward, and I don't feel the need to make this particularly strong (100% infill or more perimeters). 
+
+Even if you slung the blaster primarily via the rail here, I wouldn't be too worried, although in that case I might beef up the print parameters. 
+
+20% honeycomb infill, 4 perims/4 solids.
+No supports/ironing.
+
+#+CAPTION: Orientation
+[[./fwc_cover.png]]
+
 ** Grip
 *** File: Grip Sides.stl and Grip Sides(Mirror).stl
 Side panels which go on the grip.
@@ -202,3 +221,7 @@ No supports, no ironing.
 
 #+CAPTION:Orientation
 [[./grip.png]]
+
+*** File: Trigger.stl
+
+*** File: Trigger Guard.stl
