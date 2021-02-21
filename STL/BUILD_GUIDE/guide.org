@@ -203,6 +203,15 @@ No supports/ironing.
 #+CAPTION: Orientation
 [[./fwc_cover.png]]
 
+*** Hop up nut insert cover.stl
+The hop up.
+20% honeycomb infill, 4 perims/4 solids.
+No supports/yes ironing.
+
+#+CAPTION: Orientation
+[[./hop_up.png]]
+
+
 *** Controller Compartment Lid With Rail.stl or Controller Compartment Lid.stl
 
 30% honeycomb infill, 5 perims/4 solids.
