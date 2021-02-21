@@ -15,6 +15,10 @@ For the most part, any reasonably strong infill/perim/solid combo will work, so 
 
 Assume .20mm layer height unless specified otherwise.
 
+** Printing Techniques
+- Color Change: https://blog.prusaprinters.org/color-print_3993/
+- Captive Nuts: https://www.3dhubs.com/knowledge-base/how-assemble-3d-printed-parts-threaded-fasteners/#embedding-a-nut 
+
 ** The Hopper
 *** File: Angled Hopper.stl
 #+CAPTION: The angled hopper plated in the correct orientation.
@@ -286,6 +290,16 @@ With the diameter I used for the holes (3.2mm), I found drilling mostly unneeded
 - Drill out the holes for the flywheel motors. 
 *** Flywheels
 - Drill out the center hole with a 13/64 drill bit.
+  
+** Nuts
+Get your hex nuts and square nuts ready, as now comes the +painful+ fun part.
+There's two main types of nut inserts we are using here (aside from the captive nuts inserted during the print phase).
+
+*Inserting square nuts*: Get a flat head and just press them in. They friction fit into place quite nicely. 
+
+*Screw Pulling Technique (AKA, inserting hex nuts)*: Borrowing from PRUSA, most of the hex nuts will be inserted with this method. See 
+https://help.prusa3d.com/en/guide/1-introduction_54032 for a guide to screw pulling nuts.
+
 
 
 
