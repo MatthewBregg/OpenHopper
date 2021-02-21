@@ -199,6 +199,18 @@ No supports/ironing.
 #+CAPTION: Orientation
 [[./fwc_cover.png]]
 
+*** Controller Compartment Lid With Rail.stl or Controller Compartment Lid.stl
+
+30% honeycomb infill, 5 perims/4 solids.
+
+This is the controller cover, and the picatinny rail. If you'd prefer not to have a picatinny rail, just print the plain cover instead. 
+
+Supports no, ironing yes.
+
+#+CAPTION: Orientation
+[[./top_cover_and_rail.png]]
+
+
 ** Grip
 *** File: Grip Sides.stl and Grip Sides(Mirror).stl
 Side panels which go on the grip.
@@ -223,5 +235,57 @@ No supports, no ironing.
 [[./grip.png]]
 
 *** File: Trigger.stl
+It's the trigger.
+
+100% rectilinear infill, 4 perims/5 solids.
+
+No supports, yes. ironing.
+
+#+CAPTION: Orientation
+[[./trigger.png]]
+
+
 
 *** File: Trigger Guard.stl
+
+It's the guard for the trigger.
+
+25% honeycomb infill, 4 perims/4 solids.
+
+Supports on enforced area, see screenshot, yes. ironing.
+
+You can also print this in .1mm layer height for a smoother curve. 
+In that case, double the solids. 
+
+#+CAPTION: Paint on support enforcers
+[[./trigger_guard_1.png]]
+
+#+CAPTION: Orientation
+[[./trigger_guard_2.png]]
+
+
+* Post Processing
+** Cosmetic Gluing (Optional)
+I'm not going to go into too much detail on this as these are purely optional cosmetic greebles. 
+Print them out, ideally with a color change midway so they look nicer, and devcon them into the debossed areas in the FWC cover and the FWC. 
+
+Print out the Orb Weaver Sign A and B, and glue them to the FWC cover.stl. 
+
+Note that both files are identical. 
+
+In extras, print out the spidey_logo_disks. Note you will need to use a .25m nozzle for the details to resolve well. Enabling thin line detection in your slic3r produces ok results for a .4mm nozzle.
+The disk to the left in the stl file goes to the left side of the FWC. 
+
+** Drilling out holes
+
+I decided not to drill out holes this time.
+Mainly as I realized that drilling out holes with a square nut insert could easily leave some debris in the insert channel and make life much more difficult.
+With the diameter I used for the holes (3.2mm), I found drilling mostly unneeded, so decided to just not drill any holes, with the below exceptions 
+
+*** FWC
+- Drill out the holes for the flywheel motors. 
+*** Flywheels
+- Drill out the center hole with a 13/64 drill bit.
+
+
+
