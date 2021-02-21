@@ -1,5 +1,8 @@
 STATUS: In progress. I am currently printing parts, and writing this guide live as I go.
 
+* Materials 
+- 6x2mm bullet connectors, male and female pairs.
+
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
 
@@ -277,7 +280,7 @@ In that case, double the solids.
 [[./trigger_guard_2.png]]
 
 
-* Post Processing
+* Step 0: Immediate post processing
 ** Cosmetic Gluing (Optional)
 I'm not going to go into too much detail on this as these are purely optional cosmetic greebles. 
 Print them out, ideally with a color change midway so they look nicer, and devcon them into the debossed areas in the FWC cover and the FWC. 
@@ -296,18 +299,81 @@ Mainly as I realized that drilling out holes with a square nut insert could easi
 With the diameter I used for the holes (3.2mm), I found drilling mostly unneeded, so decided to just not drill any holes, with the below exceptions 
 
 *** FWC
-- Drill out the holes for the flywheel motors. 
+- Drill out the holes for the flywheel motors with a 3 mm bit.
+  [[./fwc_step_0.jpg]]
+  [[./fwc_step_0_1.png]]
 *** Flywheels
 - Drill out the center hole with a 13/64 drill bit.
+  [[./fw_step_0_0.jpg]]
+  [[./fw_step_0_1.jpg]]
   
 ** Nuts
 Get your hex nuts and square nuts ready, as now comes the +painful+ fun part.
 There's two main types of nut inserts we are using here (aside from the captive nuts inserted during the print phase).
 
 *Inserting square nuts*: Get a flat head and just press them in. They friction fit into place quite nicely. 
+[[./square_nut_flathead.jpg]]
 
 *Screw Pulling Technique (AKA, inserting hex nuts)*: Borrowing from PRUSA, most of the hex nuts will be inserted with this method. See 
 https://help.prusa3d.com/en/guide/1-introduction_54032 for a guide to screw pulling nuts.
+
+
+
+* Step 1: Flywheel Cage Assembly
+Remember to have drilled out the flywheel center hole (13/64 bit), and flywheel motor mount holes (3mm bit) before starting this.
+
+** Step 1.1: Inserting the nuts
+6 square nuts, 2 hex nuts need to be inserted.
+The hex nut inserts are in the front of the cage, directly adjacent to the front square nut inserts by the barrel exit. 
+Use the screw pulling technique here.
+[[./fwc_assembly_1_1.jpg]]
+
+** Step 1.2: Attaching the motors to the flywheels.
+Solder 2MM Bullet connectors onto the flywheel motor leads.
+[[./motor_bullet_connectors.jpg]]
+Pay attention to the flywheel motor mount interference tabs. 
+[[./fwc_assembly_1_2_0.png]]
+
+They line up with the indents in the motor. 
+
+[[./fwc_assembly_1_2_1.png]]
+
+Insert the motor, ensuring that it is nearly flat with the flywheel bottom. A bit less than a mm will stick up. If the tabs aren't aligned, rotate and try again.
+Avoid putting force on the motor endbell.
+[[./fwc_assembly_1_2_3.jpg]]
+
+Remembering to avoid putting force on the motor endbell, add the nyloc top nut, and torque down.
+A 5/16 ratchet wrench worked perfectly for me.
+[[./fwc_assembly_1_2_3.jpg]]
+
+Repeat for the remaining flywheel.
+
+** Step 1.3: Insert the flywheels into the cage.
+Prepare 8 M3x8 screws.
+
+Place the wire leads from the motors though the raceway in the fwc channel. 
+[[./fwc_assembly_1_3_0.jpg]]
+
+Insert the flywheel into the cage. 
+[[./fwc_assembly_1_3_1.jpg]]
+
+Use 4 M3x8 screws to tighten the motor to the cage. Screw said screws in diagonal pairs.
+
+Repeat for the other wheel. 
+
+** Finished Result
+
+[[./fwc_assembly_finished.jpg]]
+
+Ensure both wheels spin freely with minimal if any interference.
+
+If interference occurs, lightly sand away the source. 
+
+In my case, the groove fillers and wheels printed cleanly enough that there was barely any interference, and I did not need to sand. 
+
+A good test is if the wheels can be spun freely and actually spin, instead of getting caught before completely a full rotation.
+
+* Step 2:
 
 
 
