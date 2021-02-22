@@ -5,6 +5,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
 - 2x Cherry DC1 microswitch.
 - Pololu 530RPM 37D gearmotor.
+- Main power switch: Bulgin/ C1300AABBEN602A, Digikey Part #: 1091-1013-ND
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
