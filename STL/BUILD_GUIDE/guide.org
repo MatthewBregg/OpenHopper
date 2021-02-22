@@ -3,6 +3,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 * Materials 
 - 6x2mm bullet connectors, male and female pairs.
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
+- 2x Cherry DC1 microswitch.
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -414,3 +415,20 @@ Once snug, back off 1/2 turn.
 The roller should be able to spin fairly free with a good flick. 
 
 ** Step 2.5: The cycle switch.
+ Get a Cherry DC1 ready, and cut the arm down to 10mm.
+[[./2_5_0.jpg]]
+
+Get a pair of M2x20 screws ready. 
+
+Drop the screws into the feedneck, as shown.
+[[./2_5_1.jpg]]
+Tighten them until they just start poking into the switch area. 
+
+[[./2_5_2.jpg]]
+
+Feed the switch wires through the raceway as shown, and then position the cycle switch into it's slow.  Ensure the button on the switch is towards the hopper side, and not towards you.
+
+Tighten the M2x20 screws until snug, do not overtighten and strip.
+
+End result should look like
+[[./2_5_3.jpg]]
