@@ -486,8 +486,9 @@ Insert them into the indicated spots
 Tighten down.
 
 * Step 4: Combine the FWC and Feedneck
-Using the M3 bit, drill out these 4 holes, for easier screwing in later.
+Screw in M3x40mm screws just until they start exiting the front of the feedneck through these holes.
 [[./4_0_0.png]]
+[[./screws_peaking.jpg]]
 
 Get 4 M3x40mm screws. 
 Insert the flywheel motor wires into the feedneck raceway.
