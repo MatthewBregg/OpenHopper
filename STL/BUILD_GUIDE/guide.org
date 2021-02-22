@@ -569,7 +569,7 @@ Then insert the M3x8 screw into the trigger switch cavity, and gently screw it i
 
 [[./5_4_1.png]]
 
-** Step 5.5: Install the side grip panels.
+** Step 5.5: Install the side grip panels
 
 Almost done with the grip!
 
@@ -580,3 +580,6 @@ Place the side panels on the blaster, and use those screws to screw both side pa
 [[./5_5_0.jpg]]
 
 Pretty simple, and you've now got a fun clicky trigger grip to play with!
+
+
+* Step 6: Attaching the grip to the feedneck
