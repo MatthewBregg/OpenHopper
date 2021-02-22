@@ -486,3 +486,97 @@ Insert them into the indicated spots
 Tighten down.
 
 * Step 4: Combine the FWC and Feedneck
+Using the M3 bit, drill out these 4 holes, for easier screwing in later.
+[[./4_0_0.png]]
+
+Get 4 M3x40mm screws. 
+Insert the flywheel motor wires into the feedneck raceway.
+
+[[4_0_1.jpg]]
+
+Continue to pull them taught until the FWC and feedneck are touching. 
+[[4_0_2.jpg]]
+
+Now from the back of the feedneck, use the M3x40mm screws to connect the two pieces.
+
+Ensure no flywheel motor wires are pinched. 
+
+[[./4_0_3.png]]
+
+Repeat for the FWC cover, with a pair of M3x12 screws.
+[[./4_0_4.jpg]]
+
+
+* Step 5: Grip Assembly
+** Step 5.1: The trigger.
+Get a screw with ~20mm of unthreaded rod, and a total length of 28mm.
+
+Using the M3 bit, drill out the trigger.
+
+[[./5_1_0.jpg]]
+
+Slide the trigger into the grip assembly, and then screw it into place.
+
+[[./5_1_1.jpg]]
+
+** Step 5.2: Nut inserts
+(Note I did this after installing the switch, which was a mistake).
+
+[[./5_2_0.png]]
+
+Insert the two square nuts into the insert channel, and push them into place.
+You can verify they are seated by simply looking down the screw hole.
+
+Note there's also 4 holes for a pair of zip tie channels for wire management. Those wound up being an unused artifact in this build.
+If you wanted to run wires along the entire grip, they would be useful to ensure said wires steer clear of the trigger.
+
+Two more insert square nuts are needed.
+[[./5_2_1.jpg]]
+
+The final two insert square nuts.
+[[./5_2_2.jpg]]
+
+But wait there's more!
+
+There's a hex nut that needs to be pulled into place too.
+[[./5_2_3.png]]
+
+[[./5_2_4.jpg]]
+
+
+** Step 5.3: Install the trigger switch
+You will need a pair of M2x15 screws for this.
+This is simple enough. Put the wires though the top. 
+Line the switch up, adjusting until you are happy with the trigger pull.
+Insert M2 nuts on the other side, and then screw down into position.
+
+[[./5_3_0.jpg]]
+[[./5_3_1.jpg]]
+
+Give the trigger some test pulls, and adjust if desired.
+
+** Step 5.4: Install the trigger guard
+
+[[./5_4_0.jpg]]
+
+Prepare an M3x20 screw, and a M3x8 screw.
+Line the trigger guard up, and screw it into the top of the grip plate first. 
+Use the M3x20 to screw the trigger guard to the grip plate, into the hex nut that was inserted earlier. 
+
+See item 1. on the screenshot.
+
+Then insert the M3x8 screw into the trigger switch cavity, and gently screw it in. This serves more as an alignment peg than a screw, so don't expect it to be tight.
+
+[[./5_4_1.png]]
+
+** Step 5.5: Install the side grip panels.
+
+Almost done with the grip!
+
+Get 4 M3x12 screws ready.
+
+Place the side panels on the blaster, and use those screws to screw both side panels into place.
+
+[[./5_5_0.jpg]]
+
+Pretty simple, and you've now got a fun clicky trigger grip to play with!
