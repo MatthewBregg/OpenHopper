@@ -383,7 +383,7 @@ Get rid of any bridging artifacts.
 
 
 
-** Step 2.2: Insert the hex nuts into the 6 holes.
+** Step 2.2: Insert the hex nuts into the 8 holes.
 
 These are too deep to screw pull, so instead I'd advise
 - Using a longish screw to wedge the nut a bit into the hole.
@@ -392,6 +392,12 @@ These are too deep to screw pull, so instead I'd advise
 [[./2_2_2.jpg]]
 - Then screw pulling from the top.
 [[./2_2_1.jpg]]
+
+But wait there's more!
+
+There's two more hex nut inserts hiding in the back!
+Make sure to nab them too!
+[[./2_2_3.png]]
 
 ** Step 2.3: Insert the roller bearing
 
@@ -583,4 +589,76 @@ Place the side panels on the blaster, and use those screws to screw both side pa
 Pretty simple, and you've now got a fun clicky trigger grip to play with!
 
 
-* Step 6: Attaching the grip to the feedneck
+
+* Step 6: Stock preparation:
+
+** Step 6.1: The main power switch wiring
+Let's take a break from the core of the blaster for a bit and work on the stock now.
+
+First, test fit the power switch into your outer stock piece.
+
+Note the orientation, the switch guard is designed to guard against accidentally flipping off more than accidentally turning on.
+
+[[./6_1_0.jpg]]
+
+Get some 14 AWG wiring, and cut two wires. I cut lengths of 16 inches, which is overkill, but silicone stranded wire is cheap, and time is expensive. And it's much easier to get a wire down to size than to try to add more length to it. 
+
+[[./6_1_1.jpg]]
+[[./6_1_2.jpg]]
+
+** Step 6.2: Nut inserts
+Lets get some insert nuts out of the way.
+
+There's 3 nuts that need to be inserted into the inner stock. 
+Two square, one hex.
+Press the square in, screw pull the hex, done.
+[[./6_2_0.jpg]]
+[[./6_2_1.jpg]]
+
+** Step 6.3: Brass Tube (optional)
+Get a 7/32" (~5.5mm) OD brass tube like  [[https://www.amazon.com/gp/product/B00FZS231Q/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1][brass tubing]].
+It needs to be at least 166 mm long.
+
+Most likely it will be longer, so cut it down to 166mm. Aim for as close as possible, a mm or two under is fine. 
+
+Use a dremel with a zip disk for this, remember to wear eye protection!
+[[./6_3_0.jpg]]
+
+
+Put the brass tube into the outer stock piece, in the hole near the switch cutout.
+
+** Step 6.4: Inserting the main power switch
+I'd advise getting a cutter and removing [[./6_4_0.png]], the clearance with it in is a bit too tight.
+
+Slide the switch in, being mindful of orientation.
+
+You should wind up with something like (including the brass tube from the earlier step).
+[[./6_4_1.jpg]]
+[[./6_4_2.jpg]]
+
+** Step 6.5: Putting the two pieces together
+Get a M3x8 screw, and a pair of M3x12 screws. 
+
+Look at the back of the outer stock, and note the 3 screw holes.
+Note that one hole is for the battery compartment lid screw, so ignore that.
+
+See screenshot.
+[[./6_5_0.png]]
+Holes 1/2 are the square nut inserts and each take the M3x12 screws, hole 3 takes the M3x8 screw.
+
+Slip the wiring through the raceway in the inner stock, being careful not to break it, as the top layers aren't that thick/strong. 
+If broken, not the end of the world, just a bit less wire management available in the stock.
+14AWG is a bit tighter than I'd like to get through the raceway, you can brace your finger against it while pulling to relieve strain, while feeding from below.
+You can also always just glue the wires down instead once down.
+
+[[./6_5_1.jpg]]
+
+Anyway, feed the wires through, and when just a bit of slack is left, put the excess in the gap created in step 6.4.
+
+The brass tube goes into a hole in the inner stock, so make sure to align that up while doing this to (if using one!).
+
+The inner and outer stock should nicely line up. Then screw them together.
+[[./6_5_2.jpg]]
+
+
+* Step 7: ???
