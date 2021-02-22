@@ -2,6 +2,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 
 * Materials 
 - 6x2mm bullet connectors, male and female pairs.
+- 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -373,8 +374,43 @@ In my case, the groove fillers and wheels printed cleanly enough that there was 
 
 A good test is if the wheels can be spun freely and actually spin, instead of getting caught before completely a full rotation.
 
-* Step 2:
+* Step 2: Assembling the feedneck core
+** Step 2.1: Sand the inside of the feedneck.
+Get rid of any bridging artifacts.
+[[./2_1_sanding_bridge.jpg]]
 
 
 
+** Step 2.2: Insert the hex nuts into the 6 holes.
 
+These are too deep to screw pull, so instead I'd advise
+- Using a longish screw to wedge the nut a bit into the hole.
+[[./2_2_0.jpg]]
+- Using a larger hex driver + hammer to force it all the way down.
+[[./2_2_2.jpg]]
+- Then screw pulling from the top.
+[[./2_2_1.jpg]]
+
+** Step 2.3: Insert the roller bearing
+
+Get a  bearing (MR63ZZ). 
+
+Insert the bearing into the bearing hole.
+[[./2_3_0.jpg]]
+
+Use the same technique as screw pulling a hex nut to pull the bearing into place. Note that you will need a hex nut and a pair of pliers to hold the hex nut for this to work. 
+Do not overtighten the screw, you can damage the bearing.
+[[./2_3_1.jpg]]
+
+** Step 2.4: Insert the roller.
+Get an M3x14 screw.
+Insert the roller into the roller area, making sure the nub sticking up fits into the other side of the bearing cavity.
+[[./2_4_0.jpg]]
+Proceed to insert the M3x14 screw through the bearing, and into the roller.
+Tighten down, but again, do not overtighten. 
+[[./2_4_1.png]]
+
+Once snug, back off 1/2 turn.
+The roller should be able to spin fairly free with a good flick. 
+
+** Step 2.5: The cycle switch.
