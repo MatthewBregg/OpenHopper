@@ -4,6 +4,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 - 6x2mm bullet connectors, male and female pairs.
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
 - 2x Cherry DC1 microswitch.
+- Pololu 530RPM 37D gearmotor.
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -432,3 +433,56 @@ Tighten the M2x20 screws until snug, do not overtighten and strip.
 
 End result should look like
 [[./2_5_3.jpg]]
+
+Oh, then go ahead and use something (like a flathead screwdriver) to push the switch wiring through one of the raceways, and into the ESC comppartment.
+[[./2_8_0.jpg]]
+** Step 2.6: Nut inserts
+Insert 3 square nuts into the feed neck.
+[[./2_6_0.png]]
+The one in the ESC housing is a PITA to get to, I used a screwdriver to slide it along the wall until it was over the slow, and a second screwdriver to get it in.
+
+** Step 2.7: Attach the pusher/roller motor
+
+Get the 530 RPM 37D gearmotor. 
+
+Line up it's D shaft with the D shaft of the oller, and then press fit them.
+Support the roller, and motor can while doing so. 
+[[./2_7_0.jpg]]
+
+Get an M3x6, and using a ball driver, screw the motor in. 
+[[./2_7_1.jpg]]
+
+
+Get some 18AWG wire, and fish it through the spinner motor cover.
+[[./2_7_2.jpg]]
+
+Proceed to then solder those wires onto the roller motor.
+
+[[./2_7_3.jpg]]
+
+Then fish the other end of the wires through the ESC compartment.
+
+[[./2_7_4.jpg]]
+Proceed to snap fit the motor cover onto the roller motor.
+[[./2_7_5.jpg]]
+
+
+Get a M3x55 screw.
+Screw the motor cover to the feedneck, making sure to pull any slacking wire through as you do so.
+[[./2_7_6.jpg]]
+
+
+The end result should look like
+[[./2_7_7.jpg]]
+
+
+
+* Step 3: Connect the FWC Cover to the FWC
+Get a pair of M3x25mm screws.
+
+Insert them into the indicated spots 
+[[./3_0_0.png]]
+
+Tighten down.
+
+* Step 4: Combine the FWC and Feedneck
