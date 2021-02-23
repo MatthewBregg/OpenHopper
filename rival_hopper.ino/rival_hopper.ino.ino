@@ -505,7 +505,6 @@ void updateSpeedFixed(unsigned long setpointRPM) {
   setGovernorBoth();                                               //Eventually this ought to check the return value
 }
 
-#define DEBUG_SERIAL
 void initSerial() {
 #ifdef DEBUG_SERIAL
   Serial.begin(9600); // open the serial port at 9600 bps:
@@ -623,7 +622,7 @@ void loop() {
       // However!! The above 3 rev times are all on the NiMH pack, which is a bottleneck. On a 4S LIPO at roughly the same voltage (15.1 vs 14.2), I got
       // 9k RPM = 80 FPS, 100 MS rev time.
       // 13K RPM = 120 FPS, 120 MS REV time. This is probably ideal for 130 FPS games.
-      // 17K RPM = 165 FPS, still 120-130 MS rev time. Wow, now I'm impressed.
+      // 17K RPM = 165 FPS, 130-150 MS rev time. Wow, now I'm impressed.
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
