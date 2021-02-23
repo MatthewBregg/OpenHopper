@@ -19,7 +19,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 - M3 hex nuts, M3 nyloc hex nut, M3 square nuts.
   - Both of the hex nuts are standard M3 hex nuts. Thickness isn't too important, although mine are 2.2 mm thick. The square nuts are the thin kind, the same ones PRUSA sends with their printers (huh, I wonder why I happened to choose those, almost like I had them lying around already...). McMaster is one of the few places I've found that sells good quality ones for a reasonable price/shipping. Other places I've found are from a slow boat to China during COVID, extremely expensive, not stainless, or require a bulk order of hundreds. https://www.mcmaster.com/square-nuts/stainless-steel-square-nuts/. Remember to get the thin ones, 5.5x1.8mm.
 - Lots of 1.75 PETG filament.
-- PCB and electronics (See the PCB section). 
+- PCB and electronics (See the PCB section for details of what components you will need). 
   - Or a willingness to recreate my PCB on perfboard :).
     - Or a willingness to create an entirely new schematic and firmware for whatever driving configuration you want!
 - 2x [[https://www.getfpv.com/t-motor-f80-pro-2200kv-motor.html][T-Motor F80 PRO - 2200KV.]]
@@ -322,6 +322,30 @@ Note that both files are identical.
 
 In extras, print out the spidey_logo_disks. Note you will need to use a .25m nozzle for the details to resolve well. Enabling thin line detection in your slic3r produces ok results for a .4mm nozzle.
 The disk to the left in the stl file goes to the left side of the FWC. 
+
+** Barrels
+There's several barrels which can be printed out to serve as an orange tip.
+Both require some supports on the build plate.
+Attaching them is fairly straight forward, just use some M3 screws in the 4 holes, 2 in the hop up insert, 2 in the FWC itself.
+
+
+*** M3 Length:
+- Bottom two FWC holes: 6mm to the nut, 7mm of extra space, 2mm nut thickness. With a 3mm thick mount plate on the barrel, that means any screw in the range of M3x11-> M3x18 would work, so M3x12 or M3x16 ought be good for that.
+- Top two Hop up insert holes: Just 2mm to the nut, 2mm nut thickness, and 4mm extra space. With a 3mm thick mount plate on the barrel, that means any screw in the range of M3x7-> M3x11 would work. An M3x8 ought be perfect then, or an M3x10.
+  
+** Undergrip flashlight mount
+Contains zip tie channels to easily attach a flashlight to the bottom of the handle.
+
+*** M3 Length:
+Uses 2x M3 screws going into the handle. 
+- Towards stock rear one: 8mm to nut, 2mm nut thickness, 13mm extra: Needs an M3x10 -> M3x23
+ - With 3mm flashlight mount thickness, needs an M3x13 -> M3x26. 
+- Towards FWC front one:  15mm to nut, 2mm nut thickness, 6mm extra: Needs an M3x17 -> M3x23
+ - With 3mm flashlight mount thickness, needs an M3x20 -> M3x26. 
+   
+Therefore a pair of M3x20, or M3x25 screws should be ideal.
+
+
 
 ** Drilling out holes
 
@@ -690,7 +714,7 @@ The inner and outer stock should nicely line up. Then screw them together.
 
 
 * Step 7: Assembly the PCB and blaster logic board.
-*** PCB
+#TODO: Finish this, add more components/picts etc...
 [[https://oshwlab.com/mbregg/nerf-brushed-pusher-brushless-flywheel-board_copy_copy][EasyEda Link, the two relevant files are TB67H420FTG and PCB_2020-11-28_19-54-00]].
 The PCB gerber file is available in the /PCB at the root of this repo.
  should be fairly straight forward. 
