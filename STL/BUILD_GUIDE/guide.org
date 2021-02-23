@@ -2,12 +2,13 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 
 * Materials 
 - 6x2mm bullet connectors, male and female pairs.
-- 4mm bullet connectors, 4x female, 2x male.
+- 4mm bullet connectors, 6x female, 2x male.
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
 - 2x Cherry DC1 microswitch.
 - Pololu 530RPM 37D gearmotor.
 - Main power switch: Bulgin/ C1300AABBEN602A, Digikey Part #: 1091-1013-ND
 - A pair of brushless ESCs running simonk w/ flyshot.
+- 4x 7.8mm diameter, 3mm thick magnets
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -849,4 +850,123 @@ You should have something looking like this
 If the blaster control board is not in and properly connected, connect it, and insert it into the controller compartment.
 Get 4 M3x10 screws, and making sure not to pinch any wires, attach the lid to the FWC cover.
 
-* Step 13: The stock 
+* Step 13: The stock Wiring
+** Step 13.1: The xt60 connector
+Fit your pack, and then cut the lead from the switch to an appropriate length. 
+[[./13_1_0.jpg]]
+
+Repeat with the other lead, leaving about 72mm of slack coming out the back, while still having enough wire in the case so that you xt60 connector can be located where you want it with the pack in.
+
+Excuse the horribly bad picture, my camera decided to enter blur city for this section so pictures will be a bit sparse.
+
+[[./13_1_1.jpg]]
+
+Now solder up a male xt60 connector inside the battery compartment.
+
+Solder up female 4mm bullet connectors onto the leads leaving the battery compartment.
+
+** Step 13.2: The stock mounter
+
+*** 13.2.0: Nut insert time!
+We've got a lot!
+
+We've got 3 square nuts, and 3 hex nuts on the back
+[[./13_2_0.jpg]]
+
+And another secret square nut on the bottom here
+[[./13_2_1.jpg]]
+
+*** 13.2.1: The sling mount
+Get a M3x35 screw with ~30mm of smooth shaft. 
+
+Screw that into the side to form the sling mount. 
+
+[[./13_2_2.jpg]]
+
+*** 13.2.2: Feeding the wire
+Excuse the blur again, but feed the battery leads through the stock mounter hole.
+[[./13_2_3.jpg]]
+
+** Step 13.3: Mounting the stock mounter
+Get the male 4mm bullets leaving the feed neck, and hook them up to the battery compartment leads, through the stock mount.
+Now bring the stock mount to the feed neck, letting the excess wire go into the channel in the rear of the feedneck
+
+[[./13_3_1.png]]
+
+The end result should look like 
+[[./13_3_0.jpg]]
+
+
+Get a M3x16 screw.
+From the bottom, screw in said M3x16 screw to secure the stock mounter. 
+[[./13_3_4.png]]
+Get a pair of M3x20 screws.
+Now get the two side sockets, the ones facing the feedneck without an insert nut.
+[[13_3_5.png]]
+
+Get a M3x16 screw.
+Bring the stock up to the stock mounter, pulling excess wire into the battery compartment.
+Use the M3x16 screw on the highlighted hole.
+Don't tighten yet, but rid of most of the slack.
+[[./13_3_2.png]]
+
+Once that is loosely secured, place a pair of M3x12 screws into the two adjacent holes.
+Use the holes in the battery compartment to screw these screws in. 
+[[./13_3_3.jpg]]
+
+Now tighten all three screws.
+
+Congrats, the stock is mounted!!
+
+
+* Step 14: The hopper!
+[[./14_0_0.jpg]]
+** Step 14.1: The lid
+Prep 4 7.8mm diameter, and 3mm thick magnets.
+
+Friction fit into hopper and lid, make sure they attract not repel!
+
+
+[[./14_1_0.jpg]]
+[[./14_1_1.jpg]]
+
+Get your M3 drill bit again, and drill out the lid hinge. jo
+[[./14_1_2.jpg]]
+
+Oh, and screw pull a hex nut into the insert here
+[[./14_1_3.png]]
+
+
+Get a screw with a 30mm blank shaft, and cut it down to 38mm total.
+
+Use that to attach the lid to the hopper.
+
+
+[[./14_1_4.jpg]]
+
+** Step 14.2: Prep the spinner
+
+Hex nut insert, in the spinner
+[[./14_2_0.jpg]]
+
+Then get an M3x12 screw, and screw it into the spinner, just until it's poking into the d shaft in the center.
+
+** Step 14.3: Attach the hopper
+Prep 8 M3x16, and 4 M3x8 screws.
+
+Spots 1-4 (the ones that go to the motor!) use the M3x8 screws, and the remaining 8 slots use the M3x16 screws.
+
+[[./14_3_0.png]]
+
+** Step 14.4: Attach the spinner
+
+Align the D shaft so the flat of it is facing the rear of the blaster.
+Slide the spinner onto the D shaft, and put your ball driver through the hole in the hopper to tighten it up.
+
+
+[[./14_4_0.jpg]]
+
+** Congrats, you're done!
+[[./14_d.jpg]]
+
+Err, except for the battery compartment lid, I'll get to that soon.
