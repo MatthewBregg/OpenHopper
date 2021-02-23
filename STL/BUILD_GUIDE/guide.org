@@ -2,10 +2,12 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
 
 * Materials 
 - 6x2mm bullet connectors, male and female pairs.
+- 4mm bullet connectors, 4x female, 2x male.
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
 - 2x Cherry DC1 microswitch.
 - Pololu 530RPM 37D gearmotor.
 - Main power switch: Bulgin/ C1300AABBEN602A, Digikey Part #: 1091-1013-ND
+- A pair of brushless ESCs running simonk w/ flyshot.
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -493,11 +495,11 @@ Insert them into the indicated spots
 Tighten down.
 
 * Step 4: Combine the FWC and Feedneck
-Screw in M3x40mm screws just until they start exiting the front of the feedneck through these holes.
+Screw in M3x35mm screws just until they start exiting the front of the feedneck through these holes.
 [[./4_0_0.png]]
 [[./screws_peaking.jpg]]
 
-Get 4 M3x40mm screws. 
+Get 4 M3x35mm screws. 
 Insert the flywheel motor wires into the feedneck raceway.
 
 [[4_0_1.jpg]]
@@ -505,7 +507,7 @@ Insert the flywheel motor wires into the feedneck raceway.
 Continue to pull them taught until the FWC and feedneck are touching. 
 [[4_0_2.jpg]]
 
-Now from the back of the feedneck, use the M3x40mm screws to connect the two pieces.
+Now from the back of the feedneck, use the M3x35mm screws to connect the two pieces.
 
 Ensure no flywheel motor wires are pinched. 
 
@@ -662,4 +664,144 @@ The inner and outer stock should nicely line up. Then screw them together.
 [[./6_5_2.jpg]]
 
 
-* Step 7: ???
+* Step 7: Assembly the PCB and blaster logic board.
+**TODO**
+
+
+* Step 8: Wiring the feed neck up.
+
+** Step 8.0: Prep
+Get your other 37D gear motor, the 150 RPM one ready.
+[[./8_0_0.jpg]]
+
+Now prepare to make a wire splice that looks sorta like this
+[[./8_0_1.jpg]]
+
+Let's go over real quickly whats on here:
+- 16AWG: One male 4mm bullet plug pair, which connects to the battery. This will connect to the wiring harness in the stock we'll make later.
+- 16 AWG: Two female 4mm bullet plug pairs, which connect to each ESC.
+- 18 AWG: One XT30 connector, which goes to power the blster controller board. (Do not solder this onto yet, it won't fit through the raceways!
+
+This, to prepare this, I'd advise
+- Get 2 lengths 1.5 feet 18 AWG, one red one black.
+- Get 4 lengths of 13CM 16 AWG,  one red one black.
+- Get 2 lengths 3-4cm 16 AWG.,  one red one black.
+  
+Connect the male bullets to the short lengths, and then to the other side of each short length connect 2 (one color each!) of the 13 CM 16 AWG leads, and 1 of the 1.5 feet 18 AWG leads.
+
+Solder female bullet connectors onto the other ends of the 13CM leads. 
+
+Do not yet solder the xt30 connector onto the 1.5 foot lead. 
+
+** Step 8.1; Routing the wires
+Flip the feedneck over, and look at the big hole in the center.
+Now take this mess of wires, and to each ESC chamber, send a red, and black 16 AWG wire with a female 4mm bullet plug on it.
+Pick one of the chambers and send the 18 AWG power leads too. 
+Route the male 4mm bullet plugs out the back.
+You should get something looking like this.
+[[./8_1_0.jpg]]
+
+Go ahead and route the main power leads, cycle switch (in the ESC chamber from earlier), and roller motor wires (in the ESC chamber from earlier) into the controller compartment. 
+Now you can terminate those wires with the appropriate connectors.
+I used XT30 and 3 pin male headers, and deans micro T respectively.
+[[./8_1_1.jpg]]
+
+** Step 8.2: Testing time
+This is a good chance to test. Get your ESCs, and hook them up to the female 4mm bullets in the ESC compartment.
+Hook them up to the to the 2 mm motor leads too.
+
+Now wire that mess up to the PCB board.
+- Hook up the cycle switch (orientation doesn't really matter yet). 
+- Hook up the trigger, or any 3 pin switch if you don't want the awkwardness of a tethered grip.
+- Hook up the ESC 3 pin headers.
+- Hook up the controller board power.
+- Hook up the roller motor.
+- Don't worry about the spinner in the hopper yet, it can be ignored.
+  
+
+*** Initial Boot check
+
+Boot up, and verify you get no errors. If errors occur, troubleshoot.
+Be sure to try flipping the trigger plug as the first step in trouble shooting!
+Assuming you are error free, mark the trigger header so you know which orientation is correct.
+
+*** Flywheel rotation check
+Now check that the flywheels rotate in the correct direction.
+If not, flip a pair of leads and repeat.
+Now manually feed balls into the feed neck and verify they fire as expected.
+
+*** Pusher direction check
+If the pusher goes in reverse, you can either cut and flip the leads, or in software, find the line that says 
+
+#+BEGIN_SRC C++
+constexpr bool reverse_pusher = ...;
+#+END_SRC
+and flip that boolean!
+
+*** Cycle switch check
+
+One you can feed balls, check the cycle switch.
+With the feed neck completely empty, drop one ball in.
+Tapping the trigger should fire said ball, and not merely place it directly above the limit switch.
+You can fit at least two balls at once into the feed neck.
+Do so, and tap the trigger.
+One ball should fire, and the remaining ball should be stuck exactly over the cycle switch.
+Reverse the limit switch connector if this isn't so.
+Mark the correct orientation here too.
+
+
+*** Finishing up
+Remove the PCB from the blaster, making sure to have marked the trigger and cycle switch orientations (or being willing to redo that process!). 
+
+Leave the ESCs hanging and connected, we don't want to lose the correct flywheel rotation, and we are going to pack them into the chamber in a moment, where it will be more annoying to flip leads.
+
+** Step 8.3: The spinner motor
+Wire 24 AWG, 2 feet leads onto the spinner motor from earlier.
+Drop the spinner motor into place. 
+[[./8_3_0.jpg]]
+Fish it's leads through the feed neck, and into the controller chamber like the other wires.
+
+Cut the leads down to length, and solder a connector on. 
+
+The spinner will sit on a shelf and won't go down, but will happily fall out, so be careful about flipping the blaster over from this point on.
+
+** Step 8.4: The trigger wire
+
+Without flipping the feed neck upside down (laying it on it's side is fine), fish the trigger wires from the grip through the center hole in the feed neck, and into an ESC chamber, and then into the controller housing, just like the other wires.
+
+Feed this wire through so the feed neck and grip have just an inch of slack or so. 
+
+* Step 9: Connecting the grip and feedneck
+Get 4 M3x12 screws.
+
+Without flipping the feedneck upside down, line it up over the grip, and screw them together into holes 1,2,3,4.
+
+
+Get a M3x8 screw.
+In the remaining screw hole in the grip plate (#5 in the screenshot), in the FWC area in front of the trigger guard, insert this screw and tighten up.
+
+[[./9_0_0.png]]
+
+
+The end result should look something like this
+[[./9_0_2.jpg]]
+
+
+Finally, gently push the ESCs and wires into the chambers, so that they are fully enclosed in the feedneck.  It should look like this
+[[./9_0_3.jpg]]
+
+This is a good time to do another test, this time adding in the hopper spinner motor.
+[[./9_0_4.jpg]]
+
+
+Almost done!
+
+
+
+
+
+
+
+
+
+
