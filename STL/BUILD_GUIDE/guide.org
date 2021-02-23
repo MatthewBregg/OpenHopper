@@ -23,6 +23,7 @@ STATUS: In progress. I am currently printing parts, and writing this guide live 
   - Or a willingness to recreate my PCB on perfboard :).
     - Or a willingness to create an entirely new schematic and firmware for whatever driving configuration you want!
 - 2x [[https://www.getfpv.com/t-motor-f80-pro-2200kv-motor.html][T-Motor F80 PRO - 2200KV.]]
+- M3 thumbscrew.
 
     
 ** Tools
@@ -689,7 +690,28 @@ The inner and outer stock should nicely line up. Then screw them together.
 
 
 * Step 7: Assembly the PCB and blaster logic board.
-**TODO**
+*** PCB
+[[https://oshwlab.com/mbregg/nerf-brushed-pusher-brushless-flywheel-board_copy_copy][EasyEda Link, the two relevant files are TB67H420FTG and PCB_2020-11-28_19-54-00]].
+The PCB gerber file is available in the /PCB at the root of this repo.
+ should be fairly straight forward. 
+The components on the PCB are a 
+- Arduino Pro mini, flashed firmware from /rival_hopper.ino/rival_hopper.ino.ino.  I should fix that naming at some point.
+  - A tutorial on programming arduinos, especially the pro mini is out of scope for this, but there's many excellent ones online such as [[https://www.youtube.com/watch?v=78HCgaYsA70][this one]].
+- A voltage regulator, [[https://www.pololu.com/product/2843][D24V5F5]]. The square pad is BATT _VBUS, the pin to the right of it is GND, and the right most pin is 5V out.
+
+  
+Solder male headers onto the Arduino, ...
+
+Solder resistors, and capacitors onto the PCB, following the values written on the PCB itself.
+
+Solder female headers onto the PCB itself, for the pro mini, ....
+
+Solder female headers onto the PCB for the two limit switches.
+
+Solder male headers onto the PCB for the ESC connectors.
+
+See the batt leads connector. The circular pad goes to batt V_BUS, the square pad to GND.
+Solder a connector to that, I used an xt30.
 
 
 
@@ -735,7 +757,7 @@ I used XT30 and 3 pin male headers, and deans micro T respectively.
 This is a good chance to test. Get your ESCs, and hook them up to the female 3.5mm bullets in the ESC compartment.
 Hook them up to the to the 2 mm motor leads too.
 
-Now wire that mess up to the PCB board.gg
+Now wire that mess up to the PCB board.
 - Hook up the cycle switch (orientation doesn't really matter yet). 
 - Hook up the trigger, or any 3 pin switch if you don't want the awkwardness of a tethered grip.
 - Hook up the ESC 3 pin headers.
@@ -1004,3 +1026,17 @@ Get the lid out, and insert a square nut and nyloc hex nut into their respective
 Get an M3 thumbscrew ready.
 
 [[./15_0_0.jpg]]
+
+Use the dremel w/ zip disk to cut the M3 thumbscrew down to length, it should have about 5-5.5mm of threaded length.
+
+Screw the thumbscrew into the nyloc nut inserted. This is the handle to open the battery cover with.
+
+Now get an M3x12 screw.
+
+[[./15_0_2.jpg]]
+
+[[./15_0_3.jpg]]
+
+And that's it! Screw the battery door shut.
+
+To open, just remove that M3x12 screw and pull the handle!
