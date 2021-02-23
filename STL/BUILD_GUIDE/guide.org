@@ -1,14 +1,37 @@
 STATUS: In progress. I am currently printing parts, and writing this guide live as I go.
 
 * Materials 
+** Consumables
+- Lengths of silicone stranded wire, 18 AWG, 16 AWG, 14 AWG, and 24 AWG.
 - 6x2mm bullet connectors, male and female pairs.
-- 4mm bullet connectors, 6x female, 2x male.
+- 3.5mm bullet connectors, 6x female, 2x male.
 - 3X 3mm ID 6mm (3x6x2.5mm MR63ZZ) OD bearings.
-- 2x Cherry DC1 microswitch.
-- Pololu 530RPM 37D gearmotor.
+- 2x Cherry DC1 microswitch with non roller levers.
+- [[https://www.pololu.com/product/4741][Pololu 530RPM 37D gearmotor]].
+- [[https://www.pololu.com/product/4744][Pololu 150RPM 37D gearmotor.]]
+- 2 M2x20 screws, I used pan phillips drive ones.
+- 2 M2x15 screws, drive/head type doesn't really matter.
 - Main power switch: Bulgin/ C1300AABBEN602A, Digikey Part #: 1091-1013-ND
 - A pair of brushless ESCs running simonk w/ flyshot.
+  - See [[http://torukmakto4.blogspot.com/2021/01/flashing-ztw-spiders-for-flyshot.html][here]] for one way to get them. This covers flashing and prepping the ESCs for this build. A 30A ZTW Spider will work perfectly. a 40A will be a tighter fit but should work.
 - 4x 7.8mm diameter, 3mm thick magnets
+- M3 screws, hex socket cap. < 3mm head height, < 6mm head diameter.
+- M3 hex nuts, M3 nyloc hex nut, M3 square nuts.
+  - Both of the hex nuts are standard M3 hex nuts. Thickness isn't too important, although mine are 2.2 mm thick. The square nuts are the thin kind, the same ones PRUSA sends with their printers (huh, I wonder why I happened to choose those, almost like I had them lying around already...). McMaster is one of the few places I've found that sells good quality ones for a reasonable price/shipping. Other places I've found are from a slow boat to China during COVID, extremely expensive, not stainless, or require a bulk order of hundreds. https://www.mcmaster.com/square-nuts/stainless-steel-square-nuts/. Remember to get the thin ones, 5.5x1.8mm.
+- Lots of 1.75 PETG filament.
+- PCB and electronics (See the PCB section). 
+  - Or a willingness to recreate my PCB on perfboard :).
+    - Or a willingness to create an entirely new schematic and firmware for whatever driving configuration you want!
+- 2x [[https://www.getfpv.com/t-motor-f80-pro-2200kv-motor.html][T-Motor F80 PRO - 2200KV.]]
+
+    
+** Tools
+- A 2.5mm ball driver for M3 screws 
+- Soldering station and soldering supplies.
+- Dremel w/ zip disk for cutting things to size. 
+- Drill with M3 bit, and 13/64 bit.
+- A 3D printer.
+
 
 * Printing Time
 I advise printing in PETG for all parts, PLA is untested, although would probably be fine, most parts on this blaster are fairly thick.
@@ -349,7 +372,7 @@ Insert the motor, ensuring that it is nearly flat with the flywheel bottom. A bi
 Avoid putting force on the motor endbell.
 [[./fwc_assembly_1_2_3.jpg]]
 
-Remembering to avoid putting force on the motor endbell, add the nyloc top nut, and torque down.
+Remembering to avoid putting force on the motor endbell, add the nyloc top nut which came with the motor, and torque down.
 A 5/16 ratchet wrench worked perfectly for me.
 [[./fwc_assembly_1_2_3.jpg]]
 
@@ -669,6 +692,7 @@ The inner and outer stock should nicely line up. Then screw them together.
 **TODO**
 
 
+
 * Step 8: Wiring the feed neck up.
 
 ** Step 8.0: Prep
@@ -679,9 +703,9 @@ Now prepare to make a wire splice that looks sorta like this
 [[./8_0_1.jpg]]
 
 Let's go over real quickly whats on here:
-- 16AWG: One male 4mm bullet plug pair, which connects to the battery. This will connect to the wiring harness in the stock we'll make later.
-- 16 AWG: Two female 4mm bullet plug pairs, which connect to each ESC.
-- 18 AWG: One XT30 connector, which goes to power the blster controller board. (Do not solder this onto yet, it won't fit through the raceways!
+- 16AWG: One male 3.5mm bullet plug pair, which connects to the battery. This will connect to the wiring harness in the stock we'll make later.
+- 16 AWG: Two female 3.5mm bullet plug pairs, which connect to each ESC.
+- 18 AWG: One XT30 connector, which goes to power the blaster controller board. (Do not solder this onto yet, it won't fit through the raceways!
 
 This, to prepare this, I'd advise
 - Get 2 lengths 1.5 feet 18 AWG, one red one black.
@@ -696,9 +720,9 @@ Do not yet solder the xt30 connector onto the 1.5 foot lead.
 
 ** Step 8.1; Routing the wires
 Flip the feedneck over, and look at the big hole in the center.
-Now take this mess of wires, and to each ESC chamber, send a red, and black 16 AWG wire with a female 4mm bullet plug on it.
+Now take this mess of wires, and to each ESC chamber, send a red, and black 16 AWG wire with a female 3.5mm bullet plug on it.
 Pick one of the chambers and send the 18 AWG power leads too. 
-Route the male 4mm bullet plugs out the back.
+Route the male 3.5mm bullet plugs out the back.
 You should get something looking like this.
 [[./8_1_0.jpg]]
 
@@ -708,10 +732,10 @@ I used XT30 and 3 pin male headers, and deans micro T respectively.
 [[./8_1_1.jpg]]
 
 ** Step 8.2: Testing time
-This is a good chance to test. Get your ESCs, and hook them up to the female 4mm bullets in the ESC compartment.
+This is a good chance to test. Get your ESCs, and hook them up to the female 3.5mm bullets in the ESC compartment.
 Hook them up to the to the 2 mm motor leads too.
 
-Now wire that mess up to the PCB board.
+Now wire that mess up to the PCB board.gg
 - Hook up the cycle switch (orientation doesn't really matter yet). 
 - Hook up the trigger, or any 3 pin switch if you don't want the awkwardness of a tethered grip.
 - Hook up the ESC 3 pin headers.
@@ -719,7 +743,10 @@ Now wire that mess up to the PCB board.
 - Hook up the roller motor.
 - Don't worry about the spinner in the hopper yet, it can be ignored.
   
+Time to plug in. You can either plug the 3.5mm bullet connectors directly into the battery plug, or solder up an XT60 connector that terminates to a pair of bullets real quick.
 
+*Generally I advise to use something other than a unprotected lithium pack for testing an unproven circuit, especially if just plugging bullet connectors right into an XT60 connector. I ran two 7.2V NiMH packs in series, for a 12S NIMH pack. You could also probably get away with a fused/protected lithium pack too.*
+  
 *** Initial Boot check
 
 Boot up, and verify you get no errors. If errors occur, troubleshoot.
@@ -863,7 +890,7 @@ Excuse the horribly bad picture, my camera decided to enter blur city for this s
 
 Now solder up a male xt60 connector inside the battery compartment.
 
-Solder up female 4mm bullet connectors onto the leads leaving the battery compartment.
+Solder up female 3.5mm bullet connectors onto the leads leaving the battery compartment.
 
 ** Step 13.2: The stock mounter
 
@@ -888,7 +915,7 @@ Excuse the blur again, but feed the battery leads through the stock mounter hole
 [[./13_2_3.jpg]]
 
 ** Step 13.3: Mounting the stock mounter
-Get the male 4mm bullets leaving the feed neck, and hook them up to the battery compartment leads, through the stock mount.
+Get the male 3.5mm bullets leaving the feed neck, and hook them up to the battery compartment leads, through the stock mount.
 Now bring the stock mount to the feed neck, letting the excess wire go into the channel in the rear of the feedneck
 
 [[./13_3_1.png]]
@@ -970,3 +997,10 @@ Slide the spinner onto the D shaft, and put your ball driver through the hole in
 [[./14_d.jpg]]
 
 Err, except for the battery compartment lid, I'll get to that soon.
+
+* Step 15: The battery lid
+Get the lid out, and insert a square nut and nyloc hex nut into their respective spots on the battery cover lid.
+
+Get an M3 thumbscrew ready.
+
+[[./15_0_0.jpg]]
