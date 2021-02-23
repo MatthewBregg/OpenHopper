@@ -799,9 +799,54 @@ Almost done!
 
 
 
+* Step 10: Controller compartment lid nuts
+Before I forget, make sure to insert square nuts for the lid.
+
+[[./10_0_0.jpg]]
+[[./10_0_1.png]]
+
+
+* Step 11: Hop up time
+Get this piece.
+[[./11_0_0.jpg]]
+
+Square nut inserts
+[[./11_0_1.jpg]]
+
+These fall out easy, advise using M3x4 screws to keep in place
+
+[[./11_0_2.jpg]]
+
+Insert a M3 nyloc hex nut, and then on a hard service press in.
+You an help with a hammer here, just don't smash the piece into oblivion.
+You can also use something like an M3x4 partly in the nyloc nut to help it get in as far as possible. 
+
+
+[[./11_0_3.jpg]]
+[[./11_0_4.jpg]]
+
+Get these insert nuts too.
+[[./11_0_5.jpg]]
+
+Using an exacto knife/M3 drill bit, carefully clear out these sacrificial layers.
+If you use the M3 drill bit in a powered drill, be VERY careful here.
+
+Use a pair of M3x16 screws to screw the hop up piece in from the top.
+
+Now get a M3x20 screw, and insert it into the barrel and into the nyloc nut in the insert.
+
+Use the hole in the bottom of the FWC to get in there and tighten that nut up.
+[[./11_0_6.jpg]]
+
+Tighten it fairly far, ~3.8 mm of the screw (including screw head) poking out is reasonable.
+
+You should have something looking like this
+[[./11_0_7.jpg]]
 
 
 
+* Step 12: The controller lid
+If the blaster control board is not in and properly connected, connect it, and insert it into the controller compartment.
+Get 4 M3x10 screws, and making sure not to pinch any wires, attach the lid to the FWC cover.
 
-
-
+* Step 13: The stock 
