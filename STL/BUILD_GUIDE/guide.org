@@ -1,5 +1,3 @@
-STATUS: In progress. I am currently printing parts, and writing this guide live as I go.
-
 * Materials 
 ** Consumables
 - Lengths of silicone stranded wire, 18 AWG, 16 AWG, 14 AWG, and 24 AWG.
@@ -714,7 +712,10 @@ The inner and outer stock should nicely line up. Then screw them together.
 
 
 * Step 7: Assembly the PCB and blaster logic board.
-#TODO: Finish this, add more components/picts etc...
+Man, having a PCB makes this nice and self documenting. 
+[[./7_0_0.png]]
+
+
 [[https://oshwlab.com/mbregg/nerf-brushed-pusher-brushless-flywheel-board_copy_copy][EasyEda Link, the two relevant files are TB67H420FTG and PCB_2020-11-28_19-54-00]].
 The PCB gerber file is available in the /PCB at the root of this repo.
  should be fairly straight forward. 
@@ -722,20 +723,36 @@ The components on the PCB are a
 - Arduino Pro mini, flashed firmware from /rival_hopper.ino/rival_hopper.ino.ino.  I should fix that naming at some point.
   - A tutorial on programming arduinos, especially the pro mini is out of scope for this, but there's many excellent ones online such as [[https://www.youtube.com/watch?v=78HCgaYsA70][this one]].
 - A voltage regulator, [[https://www.pololu.com/product/2843][D24V5F5]]. The square pad is BATT _VBUS, the pin to the right of it is GND, and the right most pin is 5V out.
-
+- TWO TB67H420FTG motor driver on [[https://www.pololu.com/product/2999][pololu carrier]].
   
-Solder male headers onto the Arduino, ...
+Solder male headers onto the Arduino, and the two motor driver boards, and the D24V5F5 regulator.
 
 Solder resistors, and capacitors onto the PCB, following the values written on the PCB itself.
 
-Solder female headers onto the PCB itself, for the pro mini, ....
+Ignore the resistors labeled VREF, that's for playing around with setting current chopping.
+
+Solder female headers onto the PCB itself, for the pro mini, and for the two motor driver boards, and the voltage regulator.
 
 Solder female headers onto the PCB for the two limit switches.
 
 Solder male headers onto the PCB for the ESC connectors.
 
 See the batt leads connector. The circular pad goes to batt V_BUS, the square pad to GND.
+
+Don't forget a big electrolytic low ESC capacitor next to it!
+It's overkill, but I like using [[https://www.amazon.com/gp/product/B073YP95G1/ref][ Panasonic FM Series Capacitors 50V 220uf]].
+
 Solder a connector to that, I used an xt30.
+
+For both of the motor drivers, solder B-/B+ and A-/A+ together, and attach leads with a connector. I used micro deans for this.
+
+Note that the spinner motor, in the hopper, connects to the driver board at the far end of the PCB, while the pusher motor connects to the motor driver board closer to the arduino, in the middle of the PCB.
+
+You should be good to go.
+
+If you'd rather implement this on a perf board or something, I'd advise looking at the arduino sketch, the pins are all documented.
+
+
 
 
 
