@@ -22,6 +22,7 @@
     - Or a willingness to create an entirely new schematic and firmware for whatever driving configuration you want!
 - 2x [[https://www.getfpv.com/t-motor-f80-pro-2200kv-motor.html][T-Motor F80 PRO - 2200KV.]]
 - M3 thumbscrew.
+- Optional: [[https://virtuepb.com/collections/paintball-speed-feeds-crownsf/products/bunkerkings-ntr-speed-feed-spire-iii-ir-280-blue][Bunkerkings speed feed.]]
 
     
 ** Tools
