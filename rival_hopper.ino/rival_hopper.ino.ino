@@ -615,18 +615,22 @@ void loop() {
     // Set the speed
     delay(100); //Some anti-noise buffer
     while (gov_update_repeats) {
-
+      // No Hop up, long barrel
+      // 16K RPM = 139-140FPS. ??? MS REV time. This is probably a tad conservative for 150 FPS games.
+      // 16.5K RPM = 146 FPS. 
+      // No Hop up, short barrel
       // 23K RPM =  175 FPS! But also 700 MS rev time!! That's not gonna work.
       // 12K RPM = 110 FPS, 190 MS rev time.  I guess acceptable, but I'm not really happy with that....
       // 9k RPM = 80 FPS, 150 MS rev time.
       // However!! The above 3 rev times are all on the NiMH pack, which is a bottleneck. On a 4S LIPO at roughly the same voltage (15.1 vs 14.2), I got
       // 9k RPM = 80 FPS, 100 MS rev time.
-      // 13K RPM = 120 FPS, 120 MS REV time. This is probably ideal for 130 FPS games.
+      // 13K RPM = 120 FPS, 120 MS REV time. This is probably ideal for 130 FPS games. This is what I set the blaster to on the final release. 
+      // 16.5K RPM = 155 FPS, Probably ideal for NOMAD/160 FPS games.
       // 17K RPM = 165 FPS, 130-150 MS rev time. Wow, now I'm impressed.
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
-      updateSpeedFixed(13000); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
+      updateSpeedFixed(16500); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
       delay(20); //Some anti-noise buffer
       gov_update_repeats--;
     }
