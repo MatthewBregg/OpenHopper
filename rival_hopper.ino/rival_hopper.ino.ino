@@ -157,12 +157,19 @@ float get_motor_speed_factor(float volts) {
   return 1;
 
 }
+// 10.5:~13.8 RPS
+// 9.5: ~12.5 RoF
+// 8.0 gives me 10.5 RPM. 
+constexpr float motor_speed = 9.5;
 
-constexpr float motor_speed = 10.5;
+void update_motors_speed_factors() {
+  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
+}
+
 // If the pusher should be ran in reverse.
 constexpr bool reverse_pusher = true;
 void set_pusher(bool on) {
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
+  update_motors_speed_factors();
   if ( on ) {
     if (reverse_pusher) {
       // Set the pusher (CHIP A) to reverse (The pusher is connected to the bottom driver chip).
@@ -182,7 +189,7 @@ void set_pusher(bool on) {
 }
 
 void set_spinner(bool on) {
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
+  update_motors_speed_factors();
   if ( on ) {
     // Set the spinner (CHIP B) to coast (The spinner is connected to the top driver chip).
     digitalWrite(B_INA1, HIGH);
@@ -590,7 +597,7 @@ void setup() {
   // We do 32Khz with Timer 2 and a 1 prescaler, which is fine with the driver I am using.
   TCCR2B = (TCCR2B & B11111000) | B00000001;
   // Set out PWM output.
-  analogWrite(PWM, 255.0 * get_motor_speed_factor(motor_speed));
+  update_motors_speed_factors();
   initSerial();
   log("Initializing Serial Logging");
 
@@ -726,6 +733,8 @@ void loop() {
         bool timed_out = false;
         while (!readLimit() && !timed_out) {
           timed_out = ((millis() - timout_counter) > timeout);
+          // Also continously update motor speed
+          update_motors_speed_factors();
         }
         // Reset timeout.
         timout_counter = millis();
@@ -733,6 +742,8 @@ void loop() {
         // Fire the loaded ball
         while (!timed_out && readLimit()) {
           timed_out = ((millis() - timout_counter) > timeout);
+          // Also continously update motor speed
+          update_motors_speed_factors();
         }
         // Reset timeout.
         timout_counter = millis();
@@ -747,11 +758,15 @@ void loop() {
           }
           limit_switch_value = new_limit_switch_value;
           timed_out = ((millis() - timout_counter) > timeout);
+          // Also continously update motor speed
+          update_motors_speed_factors();
         }
         timout_counter = millis();
         // Load a new ball, if not already loaded.
         while (!readLimit() && !timed_out) {
           timed_out = ((millis() - timout_counter) > timeout);
+          // Also continously update motor speed
+          update_motors_speed_factors();
         }
 
         // Done firing.
@@ -765,7 +780,7 @@ void loop() {
         lastTriggerUp = millis(); //Not ACTUALLY trigger up any more due to the disconnector trap. A burst disconnect is a pseudo trigger up.
         //Main disconnector trap - This is where we land if firing ends and trigger is still down.
         // This can happen if we encounter a `timeout` in the above firing code.
-        while (readTrigger()) {
+        while (readTrigger() && timed_out) {
           delay(2);
         }
       }
