@@ -733,20 +733,20 @@ void loop() {
         bool timed_out = false;
         while (!readLimit() && !timed_out) {
           timed_out = ((millis() - timout_counter) > timeout);
-          // Also continously update motor speed
-          update_motors_speed_factors();
         }
         // Reset timeout.
         timout_counter = millis();
+        // Update motor speed
+        update_motors_speed_factors();
         delay(5);
         // Fire the loaded ball
         while (!timed_out && readLimit()) {
           timed_out = ((millis() - timout_counter) > timeout);
-          // Also continously update motor speed
-          update_motors_speed_factors();
         }
         // Reset timeout.
         timout_counter = millis();
+        // Update motor speed
+        update_motors_speed_factors();
         delay(5);
         // While the trigger remains down, keep firing.
         bool limit_switch_value = readLimit();
@@ -758,15 +758,13 @@ void loop() {
           }
           limit_switch_value = new_limit_switch_value;
           timed_out = ((millis() - timout_counter) > timeout);
-          // Also continously update motor speed
+          // Also continously update motor speed during firing.
           update_motors_speed_factors();
         }
         timout_counter = millis();
         // Load a new ball, if not already loaded.
         while (!readLimit() && !timed_out) {
           timed_out = ((millis() - timout_counter) > timeout);
-          // Also continously update motor speed
-          update_motors_speed_factors();
         }
 
         // Done firing.
