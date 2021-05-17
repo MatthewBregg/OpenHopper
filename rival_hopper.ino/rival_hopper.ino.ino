@@ -634,10 +634,11 @@ void loop() {
       // 13K RPM = 120 FPS, 120 MS REV time. This is probably ideal for 130 FPS games. This is what I set the blaster to on the final release. 
       // 16.5K RPM = 155 FPS, Probably ideal for NOMAD/160 FPS games.
       // 17K RPM = 165 FPS, 130-150 MS rev time. Wow, now I'm impressed.
+      // 12.5K RPM = 118-123 FPS, high of 125. No hop up. With hop up: 113-115, with one lowball at 105. Leaving it as this for UF HvZ.
       // Ideas to lower this number: (With the LIPO pack, this isn't needed anymore).
       // -- Increase crush. I like the current crush level though, and using a LIPO pack with more current sourcing ability solved this problem.
       // -- Print lighter (ASA, And possible lower infill/layers very carefully!). ASA is on the table, but considering we no longer have rev time issues, no need to shirk on infill/layers.
-      updateSpeedFixed(16500); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
+      updateSpeedFixed(12500); //Nb: updateGovernorBoth blocks while a packet is being transmitted, thus so does this call.
       delay(20); //Some anti-noise buffer
       gov_update_repeats--;
     }
